@@ -35,10 +35,6 @@ export default function App() {
         <Stack.Screen name="HomeScreen" component={EncryptionModule} />
         <Stack.Screen name="ToastScreen" component={ToastModule} />
       </Stack.Navigator>
-
-      {/* <Stack.Navigator>
-        <Stack.Screen name="ToastScreen" component={ToastModule} />
-      </Stack.Navigator> */}
     </NavigationContainer>
   );
 }

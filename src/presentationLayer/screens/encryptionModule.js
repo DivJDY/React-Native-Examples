@@ -1,7 +1,10 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {NativeModules, Button, Alert} from 'react-native';
+import {NativeModules, Button, Alert, View} from 'react-native';
 
 const EncryptionModule = () => {
+  // Navigation
+  const navigate = useNavigation();
   // Encryption module
   const Encryptor = NativeModules.Encryptor;
 
@@ -36,12 +39,27 @@ const EncryptionModule = () => {
     Alert.alert('hello');
   };
 
+  const onToast = () => {
+    navigate.push('ToastScreen');
+  };
+
   return (
-    <Button
-      title="Click to invoke your Encrypt native module!"
-      color="#841584"
-      onPress={onPress}
-    />
+    <>
+      <View style={{padding: 10}}>
+        <Button
+          title="Click to invoke your Encrypt native module!"
+          color="#841584"
+          onPress={onPress}
+        />
+      </View>
+      <View style={{padding: 10}}>
+        <Button
+          title="Click to invoke Toast native module!"
+          color="green"
+          onPress={onToast}
+        />
+      </View>
+    </>
   );
 };
 

@@ -28,20 +28,27 @@ const ToastModule = () => {
 
   return (
     <View style={styles.container}>
-      <Button
-        // title="Toggle Toast"
+      <View style={{paddingBottom: 10}}>
+        <Button
+          // title="Toggle Toast"
 
-        title="Button "
-        //   onPress={() => showToast()}
-        onPress={() => ToastExample.show('Toast Button 1', ToastExample.LONG)}
-      />
-      <Button
-        // title="Toggle Toast With Gravity"
-        color="#7627b8"
-        style={{paddingTop: 10}}
-        title="Button 2"
-        onPress={() => ToastExample.show('Toast Button 2', ToastExample.SHORT)}
-      />
+          title="Button "
+          //   onPress={() => showToast()}
+          onPress={() => ToastExample.show('Toast Button 1', ToastExample.LONG)}
+        />
+      </View>
+
+      <View style={{paddingBottom: 10}}>
+        <Button
+          // title="Toggle Toast With Gravity"
+          color="#7627b8"
+          style={{paddingTop: 10}}
+          title="Button 2"
+          onPress={() =>
+            ToastExample.show('Toast Button 2', ToastExample.SHORT)
+          }
+        />
+      </View>
       <Button
         title="Button 3"
         //   onPress={() => showToastWithGravityAndOffset()}
